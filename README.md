@@ -2,7 +2,7 @@
 
 Um aplicativo de Pomodoro interativo, fofo e com estética retrô baseado em janelas de sistemas operacionais antigos. O projeto conta com seleção de tempo, escolha de mascote, animações fluidas de nuvens em CSS no plano de fundo e alertas sonoros nativos.
 
-> 🌐 **Acesse o projeto publicado aqui:** 
+> 🌐 **Acesse o projeto publicado aqui:**  https://k3117.github.io/Pomodoro-Web/
 
 ---
 
