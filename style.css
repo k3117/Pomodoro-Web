@@ -1,0 +1,155 @@
+/* Configurações básicas de layout */
+body {
+    font-family: 'DM Sans', sans-serif;
+    overflow: hidden;
+    background: linear-gradient(135deg, #9531f9, #dc4fe6); /* Fundo em degradê roxo/rosa suave */
+    min-height: 100vh;
+}
+
+/* Janela estilo sistema operacional antigo */
+.card-window {
+    background: #fff5f8;
+    border-radius: 20px;
+    border: 3px solid #f9a8d4;
+    box-shadow: 0 8px 32px rgba(249, 168, 212, 0.4);
+    max-width: 340px;
+    width: 88vw;
+}
+
+/* Topo da janela com degradê e bolinhas */
+.card-header {
+    background: linear-gradient(to right, #f9a8d4, #c4b5fd);
+    padding: 8px 14px;
+    border-radius: 17px 17px 0 0;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Bolinhas coloridas do canto superior esquerdo */
+.dot {
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+}
+.dot-r { background: #ff8a8a; }
+.dot-y { background: #ffd966; }
+.dot-g { background: #7ee7a0; }
+
+/* Botões grandes de escolha */
+.time-option {
+    background: #fff;
+    border: 2.5px solid #f9a8d4;
+    border-radius: 16px;
+    padding: 16px 12px;
+    cursor: pointer;
+    transition: transform 0.2s, box-shadow 0.2s;
+    text-align: center;
+}
+.time-option:hover {
+    transform: scale(1.06);
+    box-shadow: 0 4px 16px rgba(249, 168, 212, 0.4);
+}
+
+/* Configuração para o ícone de relógio dentro dos botões */
+.icone-relogio {
+    width: 40px;
+    height: 40px;
+    object-fit: contain;
+    margin: 0 auto 8px auto;
+    display: block;
+}
+
+/* Mostrador do relógio digital */
+.timer-display {
+    font-size: 3rem;
+    font-weight: 700;
+    letter-spacing: 2px;
+    background: #2d2042;
+    color: #fff;
+    padding: 8px 24px;
+    border-radius: 12px;
+}
+
+/* Botões principais de ação */
+.btn-action {
+    background: linear-gradient(to right, #f9a8d4, #c4b5fd);
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 28px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    transition: transform 0.15s;
+}
+.btn-action:hover {
+    transform: scale(1.05);
+}
+
+/* Botões secundários (Reiniciar/Soneca) */
+.btn-secondary {
+    background: #2d2042;
+    color: #fff;
+    padding: 10px 28px;
+    border-radius: 10px;
+    border: none;
+    cursor: pointer;
+    font-weight: 600;
+}
+
+/* Tamanho dos emojis/mascotes */
+.kawaii-face {
+    font-size: 3.5rem;
+}
+
+/* Atalho para esconder elementos pelo JavaScript */
+.hidden {
+    display: none !important;
+}
+
+/* Animação do Mascote pulando levemente */
+@keyframes bounce {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-6px); }
+}
+.bounce {
+    animation: bounce 1.5s infinite;
+}
+
+/* =======================================================
+   ANIMAÇÃO DAS NUVENS FLUTUANTES (CAMADA DE FUNDO)
+   ======================================================= */
+
+.nuvens-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    z-index: 0;
+    pointer-events: none;
+}
+
+/* Estilo base de cada nuvem */
+.nuvem {
+    position: absolute;
+    color: white;
+    opacity: 0.4;
+    animation: passarNuvens linear infinite; /* Nome corrigido com dois 's' */
+}
+
+/* Regra de movimentação da direita para a esquerda - CORRIGIDO */
+@keyframes passarNuvens {
+    0% { transform: translateX(100vw); }
+    100% { transform: translateX(-100px); }
+}
+
+/* Distribuição e velocidades das 7 nuvens */
+.n1 { top: 10%; animation-duration: 20s; font-size: 4rem; }
+.n2 { top: 25%; animation-duration: 32s; animation-delay: -5s; font-size: 2.5rem; }
+.n3 { top: 60%; animation-duration: 25s; animation-delay: -10s; font-size: 5rem; }
+.n4 { top: 85%; animation-duration: 40s; animation-delay: -2s; font-size: 3rem; }
+.n5 { top: 40%; animation-duration: 28s; animation-delay: -7s; font-size: 3.2rem; }
+.n6 { top: 50%; animation-duration: 18s; animation-delay: -12s; font-size: 4.5rem; }
+.n7 { top: 73%; animation-duration: 45s; animation-delay: -15s; font-size: 2.8rem; }
